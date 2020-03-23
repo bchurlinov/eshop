@@ -5,8 +5,8 @@ import "./preview-collection-component.scss";
 const PreviewCollection = ({ title, items }) => {
 
     const renderItems = () => {
-        return items.filter((item, index) => index < 4).map(({...itemProps}, index) => {
-            return <CollectionItem key={index} {...itemProps}/>
+        return items.filter((item, index) => index < 4).map((item, index) => {
+            return <CollectionItem key={index} item={item} />
         });
     }
 

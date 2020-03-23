@@ -244,4 +244,20 @@ export const collections = [
             }
         ]
     }
-]
+];
+
+export default collections;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
