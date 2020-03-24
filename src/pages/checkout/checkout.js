@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import CheckoutItem from "../../components/checkout-item.js/checkout-item";
 import "./checkout.scss";
 
 const CheckoutPage = ({ cartItems }) => {
@@ -30,8 +31,11 @@ const CheckoutPage = ({ cartItems }) => {
                 </div>
             </div>
             {
-                cartItems.map(cartItem => {
-                    return <p key={cartItem.id}>{cartItem.name}</p>
+                cartItems.map((cartItem, index) => {
+                    return <CheckoutItem
+                        key={index}
+                        cartItem={cartItem}
+                    />
                 })
             }
             <div className="total">
