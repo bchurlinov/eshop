@@ -1,0 +1,4 @@
+export const CollectionTypes = {
+    GET_COLLECTION: "GET_COLLECTION",
+    GET_ALL_COLLECTIONS: "GET_ALL_COLLECTIONS"
+}

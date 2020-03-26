@@ -8,6 +8,7 @@ import HomePage from "./pages/homepage/homepage";
 import ShopPage from "./pages/shop/shop";
 import CheckoutPage from "./pages/checkout/checkout";
 import SignInAndSignUp from "./pages/authentication/sign-in-and-sign-up";
+import CollectionPage from "./pages/collection/collection";
 
 import { auth, createUserProfileDocument } from "./firebase/firebase";
 
@@ -58,7 +59,10 @@ class App extends React.Component {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/shop" component={ShopPage} />
           <Route exact path="/checkout" component={CheckoutPage} />
-          <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to="/" />) : (<SignInAndSignUp />)} />
+          <Route exact path="/shop/:categoryId" component={CollectionPage} />
+          <Route exact path="/signin"
+            render={() => this.props.currentUser ? (<Redirect to="/" />) : (<SignInAndSignUp />)}
+          />
         </Switch>
       </div>
     );
